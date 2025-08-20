@@ -13,7 +13,7 @@ RUN pip install --upgrade pip && pip install -r requirements.txt
 
 # Créer et activer l'environnement virtuel
 RUN python -m venv venv
-ENV PATH="/app/venv/bin:8080"
+EXPOSE 8080
 
 # Exécuter le script main.py
 CMD ["python", "app/main.py"]
