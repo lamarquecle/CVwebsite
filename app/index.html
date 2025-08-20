@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8"/>
+  <title>Ingénieur IA</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <style>
+    :root{
+      --bg:#111;
+      --fg:#eee;
+      --accent:#00c2ff;
+      font-family:system-ui,-apple-system,sans-serif;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{background:var(--bg);color:var(--fg);line-height:1.5}
+    header{padding:4rem 8vw}
+    header p {margin: 20px 0;}
+    section{padding:3rem 8vw 0rem 8vw}
+    h1{font-size:clamp(2rem,5vw,3.5rem)}
+    h2{font-size:1.75rem;margin:0rem 0rem}
+    .hero{display:flex;flex-direction:column;text-align:center;justify-content:center;min-height:80vh}
+    .btn{background:var(--accent);color:#000;text-align:center;padding:.6rem 1.2rem;border:none;border-radius:4px;font-weight:600;cursor:pointer;margin-top:1rem}
+    .btn:hover{filter:brightness(1.2)}
+    .grid{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+    .card{background:#1a1a1a;padding:1.5rem;border-radius:8px;transition:.3s}
+    .card:hover{transform:translateY(-4px)}
+    footer{background:#1a1a1a;text-align:center;padding:1rem;font-size:.8rem;color:#666}
+
+
+    .bloc{
+  position:relative;
+  width:100%;
+  max-width:600px;
+  padding:2rem;
+  background:#111;
+  border-radius:8px;
+  text-align:center;
+  overflow:hidden;
+}
+/* ligne animée sous chaque bloc */
+.bloc::after{
+  content:'';
+  position:absolute;
+  left:-100%;
+  bottom:0;
+  width:100%;
+  height:2px;
+  background:linear-gradient(90deg, transparent, var(--accent), transparent);
+  animation:slide 2.5s linear infinite;
+}
+
+/* menu */
+
+.menu {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 10%;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    background-color: #8f8f8f;
+    border: 2px solid transparent;
+    padding: 5px 20px;
+    margin: 0px 5px;
+    border-radius:12px;
+    transition: background-color 0.3s;
+}
+
+.menu a:hover {
+    background-color: #8f8f8f;
+    color : rgb(32, 32, 32);
+    border: 2px solid rgb(32, 32, 32);
+}
+
+.section {
+    height: 500px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin: 20px 0;
+}
+
+/* line animation */
+
+@keyframes pulse{
+      0%,100%{transform:scale(1);}
+      50%{transform:scale(1.05);}
+}
+
+.animated-line {
+      opacity: 0;
+      transform: translateY(10px);
+      animation: fadeInUp 0.6s ease forwards;
+}
+.animated-line:nth-child(3) { animation-delay: 0.2s; }
+.animated-line:nth-child(4) { animation-delay: 0.8s; }
+.animated-line:nth-child(5) { animation-delay: 1.4s; }
+.animated-line:nth-child(6) { animation-delay: 2s; }
+.animated-line:nth-child(7) { animation-delay: 2.6s; }
+
+@keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+}
+  </style>
+</head>
+<body>
+
+
+<header class="hero">
+  <h1>Ingénieur IA</h1>
+  <p>Accélérateur de décisions par IA</p>
+  <div class="animated-line">Je transforme les données en force de propositions.</div>
+  <div class="animated-line">Je combine expertise technique et vision stratégique.</div>
+  <div class="animated-line">J’ai conçu des modèles robustes en vers les attentes.</div>
+  <div class="animated-line">Je m’assure que chaque solution reste fiable, scalable.</div>
+  <div class="animated-line">Mon rôle : connecter la data science aux objectifs business.</div>
+</header>
+
+
+<div class="menu">
+  <a href="#services">Offres</a>
+  <a href="#services_offres">Services</a>
+  <a href="#skillmap">Skillmap</a>
+  <a href="#hardmap">Hardmap</a>
+  <a href="#contact">Contact</a>
+</div>
+
+
+<section id="services">
+  <h2>Offres</h2>
+  <iframe src="static/services_offres.html" style="border:none;width:100%;height:550px;"></iframe>
+</section>
+
+<section id="services_offres">
+  <h2>Services</h2>
+  <iframe src="static/services.html" style="border:none;width:100%;height:600px;"></iframe>
+</section>
+
+<section id="skillmap">
+  <h2>Skillmap</h2>
+  <iframe src="static/skillmap.html" style="border:none;width:100%;height:350px;"></iframe>
+</section>
+
+<section id="hardmap">
+  <h2>Hardmap</h2>
+  <iframe src="static/hardmap.html" style="border:none;width:100%;height:550px;"></iframe>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <iframe src="static/contact.html" style="border:none;width:100%;height:500px;"></iframe>
+</section>
+
+<footer>© 2025</footer>
+
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <style>
+    :root{
+      --bg:#111;
+      --fg:#eee;
+      --accent:#00c2ff;
+      font-family:system-ui,-apple-system,sans-serif;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{background:var(--bg);color:var(--fg);line-height:1.5}
+    header,section{padding:4rem 8vw}
+    h1{font-size:clamp(2rem,5vw,3.5rem)}
+    h2{font-size:1.75rem;margin-bottom:1rem}
+    h3{font-size:1.2rem;margin-bottom:1rem}
+    .hero{display:flex;flex-direction:column;justify-content:center;min-height:80vh}
+    .btn{background:var(--accent);color:#000;padding:.6rem 1.2rem;border:none;border-radius:4px;font-weight:600;cursor:pointer;margin-top:1rem}
+    .btn:hover{filter:brightness(1.2)}
+    .grid{display:grid;gap:1.5rem;grid-template-columns:repeat(auto-fit,minmax(220px,1fr))}
+    .card{background:#1a1a1a;padding:1.5rem;border-radius:8px;transition:.3s}
+    .card:hover{transform:translateY(-4px);box-shadow:0 10px 25px rgba(0,229,255,.2);}
+    footer{background:#000;text-align:center;padding:1rem;font-size:.8rem;color:#666}
+  </style>
+</head>
+
+<body>
+
+<section id="services">
+    <div class="grid">
+        <div class="card">
+            <h3>Répondre à des questions depuis un document.</h3>
+            <p><strong>Situation :</strong> Objectif de répondre rapidement et précisément aux questions médicales.</p>
+            <p><strong>Tâche :</strong> Créer un modèle d'IA pour répondre à des questions médicales.</p>
+            <p><strong>Action :</strong> Création d'un dataset, base de données locales, datavisualisation, modèle ML et clustering, temps d'éxécution.</p>
+            <p><strong>Résultat :</strong> Un modèle d'une précision de 87% a été créé malgrès un grand manque de données.</p>
+        </div>
+
+        <div class="card">
+            <h3>Extraction des données d'un document.</h3>
+            <p><strong>Situation :</strong> Objectif d'automatiser l'extraction des données clés pour un gain de temps de médecins.</p>
+            <p><strong>Tâche :</strong> Créer un modèle d'IA pour extraire des données d'un compte-rendu d'analyse et les harmoniser.</p>
+            <p><strong>Action :</strong> Création d'un dataset, modèle LLM, FastAPI, Docker, PowerBI.</p>
+            <p><strong>Résultat :</strong> 96 % de précision pour des documents pdf.</p>
+        </div>
+
+        <div class="card">
+            <h3>Gestion et exploitation des connaissances.</h3>
+            <p><strong>Situation :</strong> Méconnaissance des connaissances disponibles au sein de l'organisation.</p>
+            <p><strong>Tâche :</strong> Créer un système de gestion des connaissances.</p>
+            <p><strong>Action :</strong> Création d'un Dataset, modèle Llama-3/gpt-4o-mini, Airflow, Google Cloud Functions.</p>
+            <p><strong>Résultat :</strong> Gestion des connaissances, propositions d'amélioration continue, collaborations et chatbot. </p>
+            <a href="https://atonrythme-streamlit-800884171084.europe-west1.run.app/" target="_blank" style="color:#00e5ff">Démo (Username : "t") →</a>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>
